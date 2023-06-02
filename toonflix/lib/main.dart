@@ -26,6 +26,12 @@ class _AppState extends State<App> {
     });
   }
 
+  void resetCount() {
+    setState(() {
+      counter = 0;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -59,6 +65,11 @@ class _AppState extends State<App> {
                     iconSize: 40,
                     onPressed: downCount,
                     icon: const Icon(Icons.indeterminate_check_box_rounded),
+                  ),
+                  IconButton(
+                    iconSize: 40,
+                    onPressed: resetCount,
+                    icon: const Icon(Icons.refresh_rounded),
                   ),
                 ],
               ),
